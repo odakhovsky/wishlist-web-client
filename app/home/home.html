@@ -1,0 +1,21 @@
+<div ng-cloak class="home-wrapper">
+    <div flex layout="row" layout-align="center center">
+        <md-content layout="column" >
+            <div class="main-header">
+                <h1 align="center">Wish list</h1>
+                <h4 align="center">Make a wish come true and help someone fulfill the dream..</h4>
+            </div>
+            <div ng-show="!home.isLogIn" layout="column" layout-align="center center">
+                <login></login>
+            </div>
+            <div ng-show="home.isLogIn" layout="column" layout-align="center center">
+                Hello {{ home.user.name}}!
+                <md-button ng-click="home.logout()" layour="column" md-no-ink layout-align="center center"
+                           class="no-margin md-primary">
+                    Logout
+                </md-button>
+            </div>
+
+        </md-content>
+    </div>
+</div>

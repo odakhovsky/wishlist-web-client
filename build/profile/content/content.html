@@ -1,0 +1,62 @@
+<md-content ng-cloack flex layout-padding>
+  <div layout layout-xs="column">
+    <md-whiteframe class="md-whiteframe-1dp follow-box"
+                   layout="column"
+                   layout-padding
+    >
+      <div layout layout-align="center center">
+        Followers {{ profile.followStatistic.totalFollowers }}
+      </div>
+      <div>
+        <md-grid-list
+            md-cols-xs="3" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="6"
+            md-row-height-gt-md="1:1" md-row-height="2:2"
+            md-gutter="12px" md-gutter-gt-sm="8px">
+          <md-grid-tile ng-repeat="tile in profile.followStatistic.followers"
+                        md-rowspan="1"
+                        md-colspan="1"
+                        md-rowspan-xs="1"
+                        md-colspan-xs="1"
+                        class="photo">
+            <md-grid-tile-footer class="md-grid-tile-footer cursor-pointer"
+                                 layout layout-align="center start"
+                                 ng-click="profile.redirectToProfile(tile.nick)">
+
+              <span>{{tile.name}}</span>
+            </md-grid-tile-footer>
+          </md-grid-tile>
+
+        </md-grid-list>
+      </div>
+    </md-whiteframe>
+    <md-whiteframe class="md-whiteframe-1dp  follow-box"
+                   layout="column"
+                    layout-padding>
+      <div layout layout-align="center center">
+        Following {{ profile.followStatistic.totalFollowing }}
+      </div>
+      <div>
+        <md-grid-list
+            md-cols-xs="3" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="6"
+            md-row-height-gt-md="1:1" md-row-height="2:2"
+            md-gutter="12px" md-gutter-gt-sm="8px">
+          <md-grid-tile ng-repeat="tile in profile.followStatistic.following"
+                        md-rowspan="1"
+                        md-colspan="1"
+                        md-rowspan-xs="1"
+                        md-colspan-xs="1"
+                        class="photo">
+            <md-grid-tile-footer class="md-grid-tile-footer cursor-pointer"
+                                 layout layout-align="center start"
+                                 ng-click="profile.redirectToProfile(tile.nick)"
+            <span>{{tile.name}}</span></md-grid-tile-footer>
+          </md-grid-tile>
+
+        </md-grid-list>
+      </div>
+    </md-whiteframe>
+  </div>
+  <div layout="column" layout-fill layout-align="top center">
+    {{ profile.user.me }}!
+  </div>
+</md-content>

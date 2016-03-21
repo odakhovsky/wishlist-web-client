@@ -1,0 +1,44 @@
+.profile-content-wrapper {
+  margin-top: 15px;
+}
+
+.profile-container {
+    width: 1300px;
+}
+
+.user-avatar-64 {
+  border-radius: 99%;
+  height: 64px;
+  width: 64px;
+}
+
+.profile-sidebar-user-name {
+  font-weight: bold;
+  color: #3b5099;
+}
+
+.photo {
+  background-image: url("https://pp.vk.me/c628222/v628222045/1dbf0/K_4HePQkPzE.jpg");
+  background-size: 100% auto;
+}
+
+.md-grid-list {
+  margin: 8px; }
+
+.md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+
+.md-grid-tile-footer{
+  background: rgba(165, 143, 143, 0.33) !important;
+  height: 15px !important;
+}
+
+.follow-box {
+  padding: 5px !important;
+  width: 100%!important;
+  margin: 10px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

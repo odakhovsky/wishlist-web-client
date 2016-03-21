@@ -1,0 +1,39 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools" layout-align="center">{{ profile.user.nick }}</h1>
+  </md-toolbar>
+  <md-content layout="column" class="md-toolbar-tools-bottom inset" layout-padding>
+    <div layout="row">
+      <div class="row">
+        <img class="user-avatar-64" pointer-events="none" display="block"
+             src="https://pp.vk.me/c628222/v628222045/1dbf0/K_4HePQkPzE.jpg"/>
+      </div>
+      <div ng-cloak class="row">
+        <small class="profile-sidebar-user-name" layout-align="center center" layout="column">
+          {{profile.user.name }}
+        </small>
+        <div ng-if="!profile.user.me">
+          <md-button aria-label="follow" ng-click="profile.follow()">{{profile.followButtonText}}</md-button>
+        </div>
+      </div>
+    </div>
+    <md-divider></md-divider>
+
+    <md-list layout="column" layout-align="start start">
+      <md-list-item>
+        <md-icon md-svg-icon="{{profile.myProfilePage}}"></md-icon>
+        <span class="cursor-pointer" ng-click="profile.goOwnProfile()">My profile </span>
+      </md-list-item>
+      <md-list-item>
+        <md-icon md-svg-icon="{{profile.settingsIcon}}"></md-icon>
+        <span class="cursor-pointer">Settings</span>
+      </md-list-item>
+      <md-list-item>
+        <md-icon md-svg-icon="{{profile.exitIcon}}"></md-icon>
+        <span class="cursor-pointer"  ng-click="profile.logOut()">Exit</span>
+      </md-list-item>
+    </md-list>
+
+  </md-content>
+</md-sidenav>
+

@@ -1,0 +1,53 @@
+<div ng-cloak class="home-wrapper">
+    <div flex layout="row" layout-align="center center">
+        <md-content layout="column">
+            <div class="main-header">
+                <h1 align="center">Wish list</h1>
+                <h4 align="center">Make a wish come true and help someone fulfill the dream..</h4>
+            </div>
+            <form name="RegistrationForm">
+
+                <md-input-container layout="row">
+                    <label>Nick</label>
+                    <input required name="nick"
+                           ng-model="registration.user.nick">
+                </md-input-container>
+
+                <md-input-container layout="row">
+                    <label>Name</label>
+                    <input required name="name"
+                           ng-model="registration.user.firstName">
+                </md-input-container>
+
+                <md-input-container layout="row">
+                    <label>Email</label>
+                    <input required name="email" type="email"
+                           ng-model="registration.user.email">
+                </md-input-container>
+
+                <md-input-container layout="row">
+                    <label>Password</label>
+                    <input required name="password"
+                           ng-model="registration.user.password" type="password">
+                </md-input-container>
+
+                <div layout="row" layout-align="center center">
+
+                    <md-button flex="50" class="md-raised  md-primary" type="submit"
+                               ng-click="registration.registration(registration.user)"
+                               ng-disabled="RegistrationForm.$invalid">
+                        Create account
+                    </md-button>
+
+                    <md-button flex="20" class="md-raised  md-primary"
+                               ng-click="registration.goHomePage()">
+                        Sign in
+                    </md-button>
+
+                </div>
+
+            </form>
+
+        </md-content>
+    </div>
+</div>

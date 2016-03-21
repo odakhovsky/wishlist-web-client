@@ -1,0 +1,16 @@
+<div layout="column" layout-align="start center"
+     ng-cloak>
+  <md-progress-linear md-mode="indeterminate"
+                      ng-if="profile.loading"></md-progress-linear>
+  <div class="profile-container"
+       layout="column">
+
+    <profile-toolbar></profile-toolbar>
+
+    <section class="profile-content-wrapper" layout="row" flex>
+      <profile-sidebar></profile-sidebar>
+      <profile-content></profile-content>
+    </section>
+  </div>
+
+</div>

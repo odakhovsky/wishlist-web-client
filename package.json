@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-material": "^1.0.5",
+    "angular-route": "^1.5.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "satellizer": "^0.13.4"
+  }
+}
